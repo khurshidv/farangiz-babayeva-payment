@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tolov sahifasi</title>
+  <style>
+   * {margin: 0;padding: 0;box-sizing: border-box }body {font-family: MontserratNormal, sans-serif; background-color: #000;}.main {padding: 40px 0 106px }.main-container {max-width: 500px;margin: 0 auto;padding: 0 20px }.main-plan {background: #000;border-radius: 30px;padding: 2px 2px 30px }.plan-header {padding: 20px 31px;border-radius: 30px 30px 0 0;margin-bottom: 24px }.line {margin: 0 auto;display: flex;object-fit: contain;width: 90%;filter: invert(1) }.plan-header-bottom {display: flex;justify-content: space-between;max-width: 335px;margin: 0 auto }.plan-header-bottom-text {font-family: MontserratSemiBold, sans-serif;font-weight: 600;font-size: 15px;text-align: center;color: #fff }.plan-title {font-family: MontserratBold, sans-serif;font-weight: 700;font-size: 16px;text-align: center;text-transform: uppercase;line-height: 100%;padding: 20px;background: #0d0d0d;border-radius: 8px;color: #fff;max-width: 420px;margin: 0 auto }.plan-date {font-family: MontserratNormal, sans-serif;font-size: 18px;text-align: center;margin-bottom: 11px;font-weight: 400 }b {font-family: MontserratBold, sans-serif;font-weight: 700 }.plan-description {font-family: MontserratBold, sans-serif;text-align: center;font-size: 16px;font-weight: 700;margin: 0 auto 10px }.center {padding: 0 20px }.plan-select-now {text-align: center;font-family: MontserratNormal, sans-serif;font-size: 12px;font-weight: 400;margin-bottom: 5px }.form {display: grid;grid-template-columns: 1fr;gap: 12px }.form__col {display: grid;grid-template-columns: 1fr }.label {font-family: MontserratSemiBold, sans-serif;font-size: 16px;margin-bottom: 2px }.input {padding: 8px 12px;border-radius: 10px;border: 1px solid #000;outline: none;font-size: 18px }.plan-list-btn {font-family: MontserratSemiBold, sans-serif;width: 100%;text-align: center;background: #FE0000;border: none;padding: 9px 31px;border-radius: 8px;font-size: 18px;font-weight: 600;color: #fff;cursor: pointer;transition: all .3s;text-transform: uppercase }footer {background: #000;padding: 40px 0;color: #fff;text-align: center }.footer-container {max-width: 384px;margin: 0 auto;padding: 20px;display: flex;flex-direction: column;justify-content: center;gap: 20px }.footer-title {font-family: MontserratMedium, sans-serif;font-weight: 500;font-size: 16px;line-height: 1.5;text-align: center }.footer__number {padding: 0 8px;border: 1px solid #fff;max-width: 160px;margin: 0 auto;border-radius: 10px;font-family: MontserratNormal, sans-serif;font-size: 16px;color: #fff;text-decoration: none }.footer__link-telegram {background: #d1444e;padding: 8px 12px;border-radius: 10px;max-width: 289px;display: flex;align-items: center;gap: 20px;font-family: MontserratNormal, sans-serif;font-size: 16px;color: #fff;text-decoration: none;margin: 0 auto }.dropdown {width: fit-content }.dropdown__toggle {display: flex;align-items: center;justify-content: space-between;gap: 8px;cursor: pointer;padding: 10px 12px;border-radius: 10px;border: 1px solid #e6e7eb;background: #fff;user-select: none;min-height: 44px;}.selected-code {font-weight: 700 }.chev {width: 18px;height: 18px;display: inline-block;transition: transform .18s ease;opacity: .8 }.chev.open {transform: rotate(180deg);opacity: 1 }.dropdown__list {position: absolute;top: calc(100% + 8px);left: 0;width: 100%;background: #fff;border: 1px solid #e6e7eb;border-radius: 10px;box-shadow: 0 12px 30px rgba(12, 18, 31, 0.08);max-height: 215px;overflow: auto;z-index: 120;display: none;padding: 6px;}.dropdown__list.open {display: block }.dropdown__item {display: flex;justify-content: space-between;align-items: center;padding: 8px 10px;border-radius: 8px;cursor: pointer;font-size: 14px;color: #111;}.dropdown__item:hover {background: #f4f7ff }.dropdown__item[aria-selected="true"] {background: #eef6ff;font-weight: 700 }.country-name {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-right: 8px }.country-code {opacity: .9;font-weight: 700 }.phone-wrap {display: flex;gap: 10px;align-items: center;position: relative;}#localPhone {flex: 1;min-width: 160px }.hint {color: #6b7280;font-size: 13px;margin-top: 8px;display: block }.whatsapp_info{display: flex;align-items: center; gap: 10px;padding: 15px 0px 15px 20px; border: 1px dashed black;border-radius: 100px;margin-top: 15px;}.whatsapp_info__text{font-size: clamp(10px, 3vw, 12px); color: #474343;}
+  </style>
+  <link rel="stylesheet" href="https://isroil-ai.vercel.app/pay/css/index.css" media="all" onload="this.media='all'">
+</head>
+<body>
+  <section class="main">
+    <div class="main-container">
+         <h1 class="title">
+                <span>Kursda ishtirok</span> etish <span>uchun</span> <br> maxsus taklif
+            </h1>
+      <div class="main-plan">
+        <div class="plan-header">
+          <img alt="Stepper" class="line" src="https://isroil-ai.vercel.app/pay/images/line.webp" width="335" height="28" loading="lazy">
+          <div class="plan-header-bottom">
+            <p class="plan-header-bottom-text">Ma'lumot <br> kiritish</p>
+            <p class="plan-header-bottom-text">To'lov <br> qilish</p>
+            <p class="plan-header-bottom-text">Yakunlash</p>
+          </div>
+        </div>
+        <div class="center">
+          <p class="plan-date"><b>Start:</b> 27-Aprel</p>
+          <p class="plan-title">Rus tili 0 dan</p>
+          <p class="plan-description">2 oy ichida rus tilida bemalol gapirishni boshlaysiz</p>
+          <p class="plan-select-now">Hoziroq formani to'ldiring va bonuslarni qolga kirting</p>
+         <form id="form" class="form" novalidate="">
+  <div class="form__col">
+    <label class="label" for="name">Ism familiyangiz:</label>
+    <input id="name" name="Ism" class="input" autocomplete="name" style="">
+  </div>
+
+  <div class="form__col">
+    <label class="label">Telefon raqamingiz:</label>
+    <div class="row phone-wrap">
+      <div class="dropdown" id="countryDropdown" aria-haspopup="listbox">
+        <div id="dropdownToggle" class="dropdown__toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="dropdownList">
+          <span class="selected-code" id="selectedCode">+998</span>
+          <svg class="chev" id="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div id="dropdownList" class="dropdown__list" role="listbox" tabindex="-1" aria-label="Davlatlar">
+      <div class="dropdown__item" role="option" data-index="0" data-value="+998" data-pattern="## ###-##-##" data-country="Oʻzbekiston" tabindex="-1" aria-selected="true">
+        <span class="country-name">Oʻzbekiston</span>
+        <span class="country-code">+998</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="1" data-value="+7" data-pattern="### ###-##-##" data-country="Rossiya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Rossiya</span>
+        <span class="country-code">+7</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="2" data-value="+7" data-pattern="### ###-##-##" data-country="Qozogʻiston" tabindex="-1" aria-selected="false">
+        <span class="country-name">Qozogʻiston</span>
+        <span class="country-code">+7</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="3" data-value="+996" data-pattern="### ###-###" data-country="Qirgʻiziston" tabindex="-1" aria-selected="false">
+        <span class="country-name">Qirgʻiziston</span>
+        <span class="country-code">+996</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="4" data-value="+992" data-pattern="###-###-###" data-country="Tojikiston" tabindex="-1" aria-selected="false">
+        <span class="country-name">Tojikiston</span>
+        <span class="country-code">+992</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="5" data-value="+993" data-pattern="## ###-##-##" data-country="Turkmaniston" tabindex="-1" aria-selected="false">
+        <span class="country-name">Turkmaniston</span>
+        <span class="country-code">+993</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="6" data-value="+374" data-pattern="## ###-###" data-country="Armaniston" tabindex="-1" aria-selected="false">
+        <span class="country-name">Armaniston</span>
+        <span class="country-code">+374</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="7" data-value="+995" data-pattern="### ###-###" data-country="Gruziya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Gruziya</span>
+        <span class="country-code">+995</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="8" data-value="+380" data-pattern="## ###-##-##" data-country="Ukraina" tabindex="-1" aria-selected="false">
+        <span class="country-name">Ukraina</span>
+        <span class="country-code">+380</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="9" data-value="+375" data-pattern="## ###-##-##" data-country="Belarus" tabindex="-1" aria-selected="false">
+        <span class="country-name">Belarus</span>
+        <span class="country-code">+375</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="10" data-value="+86" data-pattern="### #### ####" data-country="Xitoy" tabindex="-1" aria-selected="false">
+        <span class="country-name">Xitoy</span>
+        <span class="country-code">+86</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="11" data-value="+82" data-pattern="##-####-####" data-country="Janubiy Koreya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Janubiy Koreya</span>
+        <span class="country-code">+82</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="12" data-value="+90" data-pattern="### ### ####" data-country="Turkiya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Turkiya</span>
+        <span class="country-code">+90</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="13" data-value="+91" data-pattern="#####-#####" data-country="Hindiston" tabindex="-1" aria-selected="false">
+        <span class="country-name">Hindiston</span>
+        <span class="country-code">+91</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="14" data-value="+81" data-pattern="##-####-####" data-country="Yaponiya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Yaponiya</span>
+        <span class="country-code">+81</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="15" data-value="+60" data-pattern="##-### ####" data-country="Malayziya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Malayziya</span>
+        <span class="country-code">+60</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="16" data-value="+62" data-pattern="###-####-####" data-country="Indoneziya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Indoneziya</span>
+        <span class="country-code">+62</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="17" data-value="+84" data-pattern="###-####-###" data-country="Vyetnam" tabindex="-1" aria-selected="false">
+        <span class="country-name">Vyetnam</span>
+        <span class="country-code">+84</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="18" data-value="+63" data-pattern="### ### ####" data-country="Filippin" tabindex="-1" aria-selected="false">
+        <span class="country-name">Filippin</span>
+        <span class="country-code">+63</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="19" data-value="+971" data-pattern="## ### ####" data-country="BAA" tabindex="-1" aria-selected="false">
+        <span class="country-name">BAA</span>
+        <span class="country-code">+971</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="20" data-value="+966" data-pattern="# ### ####" data-country="Saudiya Arabistoni" tabindex="-1" aria-selected="false">
+        <span class="country-name">Saudiya Arabistoni</span>
+        <span class="country-code">+966</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="21" data-value="+974" data-pattern="#### ####" data-country="Qatar" tabindex="-1" aria-selected="false">
+        <span class="country-name">Qatar</span>
+        <span class="country-code">+974</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="22" data-value="+968" data-pattern="#### ####" data-country="Ummon" tabindex="-1" aria-selected="false">
+        <span class="country-name">Ummon</span>
+        <span class="country-code">+968</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="23" data-value="+965" data-pattern="#### ####" data-country="Quvayt" tabindex="-1" aria-selected="false">
+        <span class="country-name">Quvayt</span>
+        <span class="country-code">+965</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="24" data-value="+20" data-pattern="## ### ####" data-country="Misr" tabindex="-1" aria-selected="false">
+        <span class="country-name">Misr</span>
+        <span class="country-code">+20</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="25" data-value="+44" data-pattern="(##) #### ####" data-country="Buyuk Britaniya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Buyuk Britaniya</span>
+        <span class="country-code">+44</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="26" data-value="+49" data-pattern="(##) #### ####" data-country="Germaniya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Germaniya</span>
+        <span class="country-code">+49</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="27" data-value="+33" data-pattern="## ## ## ## ##" data-country="Fransiya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Fransiya</span>
+        <span class="country-code">+33</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="28" data-value="+39" data-pattern="## #### ####" data-country="Italiya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Italiya</span>
+        <span class="country-code">+39</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="29" data-value="+34" data-pattern="## ### ###" data-country="Ispaniya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Ispaniya</span>
+        <span class="country-code">+34</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="30" data-value="+41" data-pattern="## ### ## ##" data-country="Shveytsariya" tabindex="-1" aria-selected="false">
+        <span class="country-name">Shveytsariya</span>
+        <span class="country-code">+41</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="31" data-value="+1" data-pattern="(###) ###-####" data-country="AQSh" tabindex="-1" aria-selected="false">
+        <span class="country-name">AQSh</span>
+        <span class="country-code">+1</span>
+      </div>
+      <div class="dropdown__item" role="option" data-index="32" data-value="+1" data-pattern="(###) ###-####" data-country="Kanada" tabindex="-1" aria-selected="false">
+        <span class="country-name">Kanada</span>
+        <span class="country-code">+1</span>
+      </div>
+    </div>
+      </div>
+      <input id="localPhone" name="Telefon raqam" class="input" inputmode="numeric" placeholder="00 000-00-00" required="" autocomplete="tel" data-mask="## ###-##-##" data-max-digits="9" style="">
+    </div>
+  </div>
+    <div class="form__col">
+    <label class="label" for="tg">Telegram username'ingiz:</label>
+    <input id="tg" name="Telegram username" class="input" placeholder="@username" autocomplete="off" required="" style="">
+  </div>
+
+  <div class="form__col">
+    <label class="label" for="course">Tarifni tanlash:</label>
+    <select id="course" name="Tarif" class="input">
+      <option value="standart">Standart — 1 097 000</option>
+      <option value="Premium" selected="">Premium — 1 297 000</option>
+    </select>
+  </div>
+
+  <div style="display: none; align-items: center; gap: 10px;">
+    <input class="offertaCheck" type="checkbox" value="true" required="" checked="" id="check" style="width: 20px; height: 20px;">
+    <label for="check" style="font-size: 12px;">
+      <a style="color: #FF815D; text-decoration: none;" href="#">
+        Ommaviy Oferta shartnomasi
+      </a> shartlariga roziman
+    </label>
+  </div>
+
+  <button type="submit" class="btn plan-list-btn">DAVOM ETISH</button>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+   <footer>
+    <div class="footer-container">
+      <a href="tel:+998946258608" class="footer__number">+998 94 625 86 08</a>
+      <a target="_blank" href="https://t.me/+998946258608" class="footer__link-telegram">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.41718 15.1853L9.02018 20.7693C9.58818 20.7693 9.83418 20.5253 10.1292 20.2323L12.7922 17.6873L18.3102 21.7283C19.3222 22.2923 20.0352 21.9953 20.3082 20.7973L23.9302 3.82531L23.9312 3.82431C24.2522 2.32831 23.3902 1.74331 22.4042 2.11031L1.11418 10.2613C-0.338822 10.8253 -0.316822 11.6353 0.867178 12.0023L6.31018 13.6953L18.9532 5.78431C19.5482 5.39031 20.0892 5.60831 19.6442 6.00231L9.41718 15.1853Z" fill="white"></path>
+        </svg>
+        Yordamchi bilan bog'lanish
+      </a>
+    </div>
+  </footer>
+  <script>
+!(function () {
+  const COUNTRIES = [
+    { name: "Oʻzbekiston", code: "+998", pattern: "## ###-##-##" },
+    { name: "Rossiya", code: "+7", pattern: "### ###-##-##" },
+    { name: "Qozogʻiston", code: "+7", pattern: "### ###-##-##" },
+    { name: "Qirgʻiziston", code: "+996", pattern: "### ###-###" },
+    { name: "Tojikiston", code: "+992", pattern: "###-###-###" },
+    { name: "Turkmaniston", code: "+993", pattern: "## ###-##-##" },
+    { name: "Armaniston", code: "+374", pattern: "## ###-###" },
+    { name: "Gruziya", code: "+995", pattern: "### ###-###" },
+    { name: "Ukraina", code: "+380", pattern: "## ###-##-##" },
+    { name: "Belarus", code: "+375", pattern: "## ###-##-##" },
+    { name: "Xitoy", code: "+86", pattern: "### #### ####" },
+    { name: "Janubiy Koreya", code: "+82", pattern: "##-####-####" },
+    { name: "Turkiya", code: "+90", pattern: "### ### ####" },
+    { name: "Hindiston", code: "+91", pattern: "#####-#####" },
+    { name: "Yaponiya", code: "+81", pattern: "##-####-####" },
+    { name: "Malayziya", code: "+60", pattern: "##-### ####" },
+    { name: "Indoneziya", code: "+62", pattern: "###-####-####" },
+    { name: "Vyetnam", code: "+84", pattern: "###-####-###" },
+    { name: "Filippin", code: "+63", pattern: "### ### ####" },
+    { name: "BAA", code: "+971", pattern: "## ### ####" },
+    { name: "Saudiya Arabistoni", code: "+966", pattern: "# ### ####" },
+    { name: "Qatar", code: "+974", pattern: "#### ####" },
+    { name: "Ummon", code: "+968", pattern: "#### ####" },
+    { name: "Quvayt", code: "+965", pattern: "#### ####" },
+    { name: "Misr", code: "+20", pattern: "## ### ####" },
+    { name: "Buyuk Britaniya", code: "+44", pattern: "(##) #### ####" },
+    { name: "Germaniya", code: "+49", pattern: "(##) #### ####" },
+    { name: "Fransiya", code: "+33", pattern: "## ## ## ## ##" },
+    { name: "Italiya", code: "+39", pattern: "## #### ####" },
+    { name: "Ispaniya", code: "+34", pattern: "## ### ###" },
+    { name: "Shveytsariya", code: "+41", pattern: "## ### ## ##" },
+    { name: "AQSh", code: "+1", pattern: "(###) ###-####" },
+    { name: "Kanada", code: "+1", pattern: "(###) ###-####" },
+  ];
+
+  const onlyDigits = (value) => (value || "").replace(/\D/g, "");
+  const countMaskDigits = (mask) => (mask.match(/#/g) || []).length;
+
+  function applyMask(digits, mask) {
+    let result = "";
+    let di = 0;
+    for (let ch of mask) {
+      if (ch === "#") {
+        if (di >= digits.length) break;
+        result += digits[di++];
+      } else {
+        if (di < digits.length) result += ch;
+      }
+    }
+    if (di < digits.length) {
+      result += " " + digits.slice(di);
+    }
+    return result;
+  }
+
+  const dropdownToggle = document.getElementById("dropdownToggle");
+  const dropdownList = document.getElementById("dropdownList");
+  const selectedCodeEl = document.getElementById("selectedCode");
+  const chev = document.getElementById("chev");
+  const localPhone = document.getElementById("localPhone");
+  const form = document.getElementById("form");
+  const submitBtn = form.querySelector(".plan-list-btn");
+
+  function prepareDigits(raw) {
+    const currentMask = localPhone.dataset.mask || "### ### ####";
+    const maxDigits =
+      parseInt(
+        localPhone.dataset.maxDigits || countMaskDigits(currentMask),
+        10,
+      ) || 20;
+    let digits = onlyDigits(raw != null ? raw : localPhone.value || "");
+    const codeDigits = onlyDigits(selectedCodeEl.textContent || "");
+    if (
+      digits.length > maxDigits &&
+      codeDigits &&
+      digits.startsWith(codeDigits)
+    ) {
+      digits = digits.slice(codeDigits.length);
+    }
+    if (digits.length > maxDigits) {
+      digits = digits.slice(0, maxDigits);
+    }
+    return { digits, mask: currentMask, max: maxDigits };
+  }
+
+  dropdownList.innerHTML = COUNTRIES.map(
+    (country, index) => `
+      <div class="dropdown__item" role="option" data-index="${index}" data-value="${country.code}" data-pattern="${country.pattern}" data-country="${country.name}" tabindex="-1" aria-selected="${index === 0 ? 'true' : 'false'}">
+        <span class="country-name">${country.name}</span>
+        <span class="country-code">${country.code}</span>
+      </div>
+    `,
+  ).join("");
+
+  let items = Array.from(dropdownList.querySelectorAll(".dropdown__item"));
+  let selectedIndex = COUNTRIES.findIndex((c) => c.code === "+998");
+  if (selectedIndex === -1) selectedIndex = 0;
+  let isOpen = false;
+  let focusedIndex = selectedIndex;
+
+  function selectCountry(index, { keepOpen = false } = {}) {
+    items.forEach((el, i) =>
+      el.setAttribute("aria-selected", i === index ? "true" : "false"),
+    );
+    selectedIndex = index;
+    focusedIndex = index;
+    const country = COUNTRIES[index];
+    selectedCodeEl.textContent = country.code;
+    const mask = country.pattern;
+    const maxDigits = countMaskDigits(mask);
+    localPhone.dataset.mask = mask;
+    localPhone.dataset.maxDigits = String(maxDigits);
+    localPhone.placeholder = mask.replace(/#/g, "0");
+    let digits = onlyDigits(localPhone.value || "");
+    const codeDigits = onlyDigits(country.code);
+    if (
+      digits.length > maxDigits &&
+      codeDigits &&
+      digits.startsWith(codeDigits)
+    ) {
+      digits = digits.slice(codeDigits.length);
+    }
+    if (digits.length > maxDigits) {
+      digits = digits.slice(0, maxDigits);
+    }
+    localPhone.value = applyMask(digits, mask);
+    if (!keepOpen) {
+      closeDropdown();
+      setTimeout(() => {
+        localPhone.focus();
+        try {
+          localPhone.setSelectionRange(
+            localPhone.value.length,
+            localPhone.value.length,
+          );
+        } catch (_) {}
+      }, 0);
+    }
+  }
+
+  function openDropdown() {
+    dropdownList.classList.add("open");
+    chev.classList.add("open");
+    dropdownToggle.setAttribute("aria-expanded", "true");
+    isOpen = true;
+    (items[focusedIndex] || items[0]).focus();
+  }
+
+  function closeDropdown() {
+    dropdownList.classList.remove("open");
+    chev.classList.remove("open");
+    dropdownToggle.setAttribute("aria-expanded", "false");
+    isOpen = false;
+  }
+
+  items = Array.from(dropdownList.querySelectorAll(".dropdown__item"));
+  selectCountry(selectedIndex, { keepOpen: true });
+
+  setTimeout(() => {
+    if (localPhone.value) {
+      const { digits, mask } = prepareDigits(localPhone.value);
+      localPhone.value = applyMask(digits, mask);
+    }
+  }, 100);
+
+  dropdownToggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    isOpen ? closeDropdown() : openDropdown();
+  });
+
+  dropdownToggle.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openDropdown();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      openDropdown();
+      items[items.length - 1].focus();
+    }
+  });
+
+  dropdownList.addEventListener("click", (e) => {
+    const item = e.target.closest(".dropdown__item");
+    if (!item) return;
+    const index = parseInt(item.dataset.index, 10);
+    if (Number.isNaN(index)) return;
+    selectCountry(index);
+  });
+
+  dropdownList.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      focusedIndex = (focusedIndex + 1) % items.length;
+      items[focusedIndex].focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      focusedIndex = (focusedIndex - 1 + items.length) % items.length;
+      items[focusedIndex].focus();
+    } else if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      const index = parseInt(document.activeElement.dataset.index, 10);
+      if (!Number.isNaN(index)) selectCountry(index);
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      closeDropdown();
+    }
+  });
+
+  function focusPhoneHandler(e) {
+    if (e.type === "touchstart") {
+      e.preventDefault();
+    }
+    e.stopPropagation();
+    if (isOpen) {
+      closeDropdown();
+    }
+    setTimeout(() => {
+      localPhone.focus();
+      try {
+        localPhone.setSelectionRange(
+          localPhone.value.length,
+          localPhone.value.length,
+        );
+      } catch (_) {}
+    }, 0);
+  }
+
+  localPhone.addEventListener("touchstart", focusPhoneHandler, {
+    passive: false,
+  });
+  localPhone.addEventListener("mousedown", focusPhoneHandler);
+
+  localPhone.addEventListener("click", (e) => {
+    e.stopPropagation();
+    localPhone.focus();
+    try {
+      localPhone.setSelectionRange(
+        localPhone.value.length,
+        localPhone.value.length,
+      );
+    } catch (_) {}
+  });
+
+  localPhone.addEventListener("focus", () => {
+    if (isOpen) closeDropdown();
+  });
+
+  localPhone.addEventListener("keydown", (e) => {
+    const allowedControlKeys = [
+      "Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab", "Home", "End",
+    ];
+    if (allowedControlKeys.includes(e.key) || e.ctrlKey || e.metaKey) {
+      return;
+    }
+    if (/^\d$/.test(e.key)) {
+      const { digits, max } = prepareDigits(localPhone.value);
+      const selectionLen =
+        localPhone.selectionEnd - localPhone.selectionStart || 0;
+      if (digits.length >= max && selectionLen === 0) {
+        e.preventDefault();
+      }
+    } else {
+      e.preventDefault();
+    }
+  });
+
+  localPhone.addEventListener("input", () => {
+    const { digits, mask } = prepareDigits(localPhone.value);
+    localPhone.value = applyMask(digits, mask);
+  });
+
+  localPhone.addEventListener("paste", (e) => {
+    e.preventDefault();
+    const text =
+      (e.clipboardData || window.clipboardData).getData("text") || "";
+    const { digits, mask } = prepareDigits(text);
+    localPhone.value = applyMask(digits, mask);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (isOpen && !document.getElementById("countryDropdown").contains(e.target)) closeDropdown();
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Yuborilmoqda...";
+    try {
+      const name = (document.getElementById("name").value || "").trim();
+      const { digits } = prepareDigits(localPhone.value);
+      if (!name) {
+        alert("Iltimos, ismingizni kiriting.");
+        throw new Error("Name required");
+      }
+      if (!digits || digits.length < 3) {
+        alert("Iltimos, telefon raqamingizni toʻliq kiriting.");
+        throw new Error("Phone required");
+      }
+      const fullPhone = (selectedCodeEl.textContent || "+998") + digits;
+      const fd = new FormData(form);
+      const offertaCheck = document.querySelector(".offertaCheck");
+      if (offertaCheck && !offertaCheck.checked) {
+        alert("Iltimos, Ommaviy Oferta shartlariga rozilikni tasdiqlang.");
+        throw new Error("Oferta required");
+      }
+      const payload = {
+        name: fd.get("Ism") || name,
+        phone_number: fullPhone,
+        type: fd.get("Tarif") || "",
+        telegram: (fd.get("Telegram username") || "").toString().trim(),
+        timestamp: new Date().toISOString(),
+        offerta:
+          offertaCheck && offertaCheck.checked ? "Roziman" : "Rozi emasman",
+      };
+      localStorage.setItem("formData", JSON.stringify(payload));
+      try {
+        const existing = localStorage.getItem("submissions");
+        const arr = existing ? JSON.parse(existing) : [];
+        arr.push(payload);
+        localStorage.setItem("submissions", JSON.stringify(arr));
+      } catch (_) {}
+      alert("Ma'lumotlar saqlandi! Rahmat!");
+    } catch (err) {
+      console.error(err);
+    } finally {
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    }
+  });
+})();
+  </script>
+</body></html>

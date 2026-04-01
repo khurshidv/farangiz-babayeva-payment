@@ -1,0 +1,1 @@
+https://isroil-ai.vercel.app/pay/
