@@ -548,7 +548,7 @@
         arr.push(payload);
         localStorage.setItem("submissions", JSON.stringify(arr));
       } catch (_) {}
-      alert("Ma'lumotlar saqlandi! Rahmat!");
+      window.location.href = "./pay.html";
     } catch (err) {
       console.error(err);
     } finally {
