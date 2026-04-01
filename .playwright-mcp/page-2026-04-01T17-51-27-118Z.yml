@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "Kursda ishtirok etish uchun maxsus taklif" [level=1] [ref=e4]:
+      - text: Kursda ishtirok etish uchun
+      - text: maxsus taklif
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e10]
+        - generic [ref=e18]:
+          - paragraph [ref=e19]:
+            - text: Ma'lumot
+            - text: kiritish
+          - paragraph [ref=e20]:
+            - text: To'lov
+            - text: qilish
+          - paragraph [ref=e21]: Yakunlash
+      - generic [ref=e22]:
+        - paragraph [ref=e23]: "Start: 27-Aprel"
+        - paragraph [ref=e24]: Rus tili 0 dan
+        - paragraph [ref=e25]: 2 oy ichida rus tilida bemalol gapirishni boshlaysiz
+        - paragraph [ref=e26]: Hoziroq formani to'ldiring va bonuslarni qolga kirting
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: "Ism familiyangiz:"
+            - textbox "Ism familiyangiz:" [ref=e30]
+          - generic [ref=e31]:
+            - generic [ref=e32]: "Telefon raqamingiz:"
+            - generic [ref=e33]:
+              - button "+998" [ref=e35] [cursor=pointer]:
+                - generic [ref=e36]: "+998"
+                - img [ref=e37]
+              - textbox "00 000-00-00" [ref=e39]
+          - generic [ref=e40]:
+            - generic [ref=e41]: "Telegram username'ingiz:"
+            - textbox "Telegram username'ingiz:" [ref=e42]:
+              - /placeholder: "@username"
+          - generic [ref=e43]:
+            - generic [ref=e44]: "Tarifni tanlash:"
+            - combobox "Tarifni tanlash:" [ref=e45]:
+              - option "Standart — 1 097 000"
+              - option "Premium — 1 297 000" [selected]
+          - button "DAVOM ETISH" [ref=e46] [cursor=pointer]
+  - contentinfo [ref=e47]:
+    - generic [ref=e48]:
+      - link "+998 94 625 86 08" [ref=e49] [cursor=pointer]:
+        - /url: tel:+998946258608
+      - link "Yordamchi bilan bog'lanish" [ref=e50] [cursor=pointer]:
+        - /url: https://t.me/+998946258608
+        - img [ref=e51]
+        - text: Yordamchi bilan bog'lanish

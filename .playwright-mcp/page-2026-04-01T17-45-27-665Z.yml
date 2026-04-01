@@ -1,0 +1,51 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "Kursda Ishtirok Etish uchun maXsus taklif" [level=1] [ref=e4]:
+      - text: Kursda Ishtirok Etish uchun
+      - text: maXsus taklif
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img "Supermiya" [ref=e7]
+        - generic [ref=e8]:
+          - paragraph [ref=e9]:
+            - text: Ma'lumot
+            - text: kiritish
+          - paragraph [ref=e10]:
+            - text: To'lov
+            - text: qilish
+          - paragraph [ref=e11]: Yakunlash
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: "Start: 27-Aprel"
+        - paragraph [ref=e14]: Nuvi - yangi era sari.
+        - paragraph [ref=e15]: Isroil Abdullayev bilan zamonaviy kasblarni oson o'rganing
+        - paragraph [ref=e16]: Hoziroq formani to'ldiring va bonuslarni qolga kirting
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: "Ism familiyangiz:"
+            - textbox "Ism familiyangiz:" [ref=e20]
+          - generic [ref=e21]:
+            - generic [ref=e22]: "Telefon raqamingiz:"
+            - generic [ref=e23]:
+              - button "+998" [ref=e25] [cursor=pointer]:
+                - generic [ref=e26]: "+998"
+                - img [ref=e27]
+              - textbox "00 000-00-00" [ref=e29]
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Telegram username'ingiz:"
+            - textbox "Telegram username'ingiz:" [ref=e32]:
+              - /placeholder: "@username"
+          - generic [ref=e33]:
+            - generic [ref=e34]: "Tarifni tanlash:"
+            - combobox "Tarifni tanlash:" [ref=e35]:
+              - option "Standard — 3 497 000"
+              - option "Premium — 3 997 000" [selected]
+              - option "VIP — 7 997 000"
+          - button "DAVOM ETISH" [ref=e36] [cursor=pointer]
+  - contentinfo [ref=e37]:
+    - generic [ref=e38]:
+      - link "+998 78 113 70 44" [ref=e39] [cursor=pointer]:
+        - /url: tel:+998781137044
+      - link "Yordamchi bilan bog'lanish" [ref=e40] [cursor=pointer]:
+        - /url: https://t.me/nuvi_admin?text=Assalomu%20alaykum.%0AMen%20%22Nuvi%20-%20yangi%20era%20sari%22%20kursiga%20yozilmoqchi%20edim.
+        - img [ref=e41]
+        - text: Yordamchi bilan bog'lanish
