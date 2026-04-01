@@ -1,0 +1,10 @@
+.claude/
+.playwright-mcp/
+original-pay.js
+pay-source.html
+pay-reference.png
+pay-result.png
+reference-source.html
+reference-full.png
+result-full.png
+result-v2.png
