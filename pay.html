@@ -17,7 +17,7 @@
                 <div class="payment__tariff">Tarif: Premium</div>
                 <div class="payment__price pricesAll">1&nbsp;297&nbsp;000 so'm</div>
                 <div class="payment__timer"><span class="payment__timer-label">To'lov qilish muddati tugashiga oz
-                        qoldi:</span><span class="payment__time" id="timer">19:55</span></div>
+                        qoldi:</span><span class="payment__time" id="timer">17:55</span></div>
             </div>
             <div class="payment__instruction">
                 <p class="payment__step">1. Quyidagi to'lov turlaridan biri orqali to`lovni amalga oshiring</p>
@@ -72,28 +72,20 @@
                     </div>
                 </div>
 
-                <p class="payment__step">2. To'lovingiz muvaffaqiyatli amalga oshganini tasdiqlovchi rasmni saqlab oling
-                    (screenshot).</p>
+                <p class="payment__step">2. To'lovingiz muvaffaqiyatli amalga oshganini tasdiqlovchi rasmni saqlab oling (screenshot).</p>
                 <p class="payment__step">3. To'lovingiz rasmini yuklang va <b>davom etish</b> tugmasini bosing.</p>
-                <form id="paymentForm">
-                    <input type="file" id="chek" name="chek" accept=".pdf,.png,.jpg,.jpeg" hidden="" style="">
-                    <label for="chek" class="uploadCheck">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="66" viewBox="0 0 54 66">
-                            <g>
-                                <path d="M 3.86 63.09 C1.51,61.19 1.50,61.08 1.17,35.84 C0.80,8.16 1.33,4.08 5.54,2.16 C7.05,1.47 13.26,1.00 20.80,1.00 L 33.52 1.00 L 43.26 10.29 L 53.00 19.59 L 53.00 40.29 C53.00,59.67 52.87,61.13 51.00,63.00 C49.12,64.88 47.67,65.00 27.61,65.00 C8.05,65.00 6.02,64.84 3.86,63.09 ZM 49.96 60.07 C50.57,58.94 51.00,50.61 51.00,40.07 L 51.00 22.00 L 43.65 22.00 C33.94,22.00 32.65,20.71 32.65,10.98 L 32.65 4.00 L 19.36 4.00 C7.24,4.00 5.98,4.17 5.04,5.93 C3.49,8.82 3.64,59.24 5.20,60.80 C6.06,61.66 12.46,62.00 27.66,62.00 C47.67,62.00 48.99,61.88 49.96,60.07 ZM 41.70 12.22 L 35.00 5.52 L 35.00 11.14 C35.00,14.47 35.52,17.19 36.28,17.81 C37.43,18.77 46.86,19.90 47.95,19.21 C48.20,19.06 45.39,15.91 41.70,12.22 ZM 14.00 50.92 C14.00,48.08 14.38,46.97 15.25,47.27 C15.94,47.51 16.46,48.67 16.42,49.85 C16.34,51.92 16.73,52.00 27.17,52.00 L 38.00 52.00 L 38.00 49.50 C38.00,47.94 38.57,47.00 39.50,47.00 C40.58,47.00 41.00,48.11 41.00,51.00 L 41.00 55.00 L 27.50 55.00 L 14.00 55.00 L 14.00 50.92 ZM 26.00 37.83 L 26.00 31.65 L 23.68 33.83 C19.73,37.54 19.73,34.86 23.68,30.81 L 27.41 27.00 L 31.16 30.66 C35.19,34.59 35.40,37.67 31.39,33.90 L 29.00 31.65 L 29.00 37.83 C29.00,42.65 28.67,44.00 27.50,44.00 C26.33,44.00 26.00,42.65 26.00,37.83 Z" fill="rgba(0,0,0,1)"></path>
-                            </g>
-                        </svg>
-                        Chek rasmini yuklang
-                    </label>
-                    <button type="submit" class="payment__btn">Davom etish</button>
-                </form>
+                <div class="radioRow">
+                    <label class="radioBox"><input type="radio" name="status" value="To'liq to'ladim" checked> To'liq to'ladim</label>
+                    <label class="radioBox"><input type="radio" name="status" value="Joy band qildim"> Joy band qildim</label>
+                </div>
+                <a href="https://t.me/Farangiz_rustili" class="payment__btn" style="margin-bottom:20px;">Davom etish</a>
             </div>
             <div class="payment__help">
                 <p class="payment__help-text">Yordam kerakmi? <br>
                     Yordamchiga yozish</p>
-                <a href="https://t.me/+998946258608" class="payment__btn payment__btn--admin">Adminga
+                <a href="https://t.me/Farangiz_rustili" class="payment__btn payment__btn--admin">Adminga
                     yozish</a>
-                <a href="tel:+998946258608" style="background-color: #21BE7B;border-color: #21BE7B; margin-top: 15px; display: flex;" class="payment__btn payment__btn--admin">+998 94 625 86 08</a>
+                <a href="tel:+998200300567" style="background-color: #21BE7B;border-color: #21BE7B; margin-top: 15px; display: flex;" class="payment__btn payment__btn--admin">+998 20 030 05 67</a>
             </div>
         </div>
     </div>
@@ -272,7 +264,7 @@ if (paymentForm) {
  * Timer (20:00)
  ***********************/
 let timerElement = document.getElementById("timer");
-let minutes = 20;
+let minutes = 18;
 let seconds = 0;
 
 function updateTimer() {

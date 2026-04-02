@@ -1,0 +1,54 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img "Supermiya" [ref=e6]
+      - generic [ref=e7]:
+        - paragraph [ref=e8]:
+          - text: Ma'lumot
+          - text: kiritish
+        - paragraph [ref=e9]:
+          - text: To‘lov
+          - text: qilish
+        - paragraph [ref=e10]: Yakunlash
+    - generic [ref=e11]:
+      - heading "IELTS SPRINT 2.0" [level=2] [ref=e12]
+      - paragraph [ref=e13]: "Start: 30-Mart"
+      - paragraph [ref=e14]: 3 oy ichida IELTS 7.0+ darajasiga chiqing
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: "Ism familiyangiz:"
+          - textbox "Ism familiyangiz:" [ref=e18]
+        - generic [ref=e19]:
+          - generic [ref=e20]: "Telefon raqamingiz:"
+          - generic [ref=e21]:
+            - button "+998" [ref=e23] [cursor=pointer]:
+              - generic [ref=e24]: "+998"
+              - img [ref=e25]
+            - textbox "XX XXX-XX-XX" [ref=e27]
+          - generic [ref=e28]:
+            - img "whatsapp" [ref=e29]
+            - paragraph [ref=e30]:
+              - text: Agar chet elda bo'lsangiz whatsapp
+              - text: nomeringizni yozib qoldiring
+        - generic [ref=e31]:
+          - generic [ref=e32]: "Tarifni tanlang:"
+          - combobox "Tarifni tanlang:" [ref=e33]:
+            - option "Mustaqil — 1 797 000 so'm"
+            - option "Premium — 1 997 000 so'm" [selected]
+            - option "VIP — 4 997 000 so'm"
+        - button "DAVOM ETISH" [ref=e34] [cursor=pointer]
+        - paragraph [ref=e35]:
+          - text: Tugmani bosish orqali siz
+          - link "shaxsiy ma'lumotlaringizni saqlash va qayta ishlashga" [ref=e36] [cursor=pointer]:
+            - /url: https://docs.google.com/document/d/1gvYVjRRLjhfUOQDhttIWe5z-6_jf3AVbxLPtcJXps9I/edit?usp=sharing
+            - text: shaxsiy ma'lumotlaringizni saqlash
+            - text: va qayta ishlashga
+          - text: rozilik bildirasiz!
+  - contentinfo [ref=e37]:
+    - generic [ref=e38]:
+      - link "+998 55 055 02 20" [ref=e39] [cursor=pointer]:
+        - /url: tel:+998550550220
+      - link "Yordamchi bilan bog'lanish" [ref=e40] [cursor=pointer]:
+        - /url: https://t.me/linguabarno_support?text=Assalomu%20Alaykum.%20IELTS%20SPRINT%202.0%20kursiga%20joyimni%20band%20qilmoqchiman
+        - img [ref=e41]
+        - text: Yordamchi bilan bog'lanish
