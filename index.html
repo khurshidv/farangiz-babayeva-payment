@@ -560,7 +560,7 @@
         webhookData.append("name", payload.name);
         webhookData.append("phone", fullPhone);
         webhookData.append("TARIF", tarifCode);
-        webhookData.append("key", "LMFMkEO9NclzlJp");
+        webhookData.append("secret_key", "LMFMkEO9NclzlJp");
 
         const sent = navigator.sendBeacon(
           "https://app.webinar-payment.uz/tilda/add-client",
