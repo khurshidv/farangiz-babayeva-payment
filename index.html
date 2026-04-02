@@ -510,7 +510,7 @@
     if (isOpen && !document.getElementById("countryDropdown").contains(e.target)) closeDropdown();
   });
 
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     const originalBtnText = submitBtn.textContent;
     submitBtn.disabled = true;
@@ -554,18 +554,26 @@
         localStorage.setItem("submissions", JSON.stringify(arr));
       } catch (_) {}
 
-      // Send to webhook
+      // Send to webhook via sendBeacon (survives page navigation)
       try {
-        const webhookData = new FormData();
+        const webhookData = new URLSearchParams();
         webhookData.append("name", payload.name);
         webhookData.append("phone", fullPhone);
-        webhookData.append("telegram", payload.telegram);
         webhookData.append("TARIF", tarifCode);
         webhookData.append("key", "LMFMkEO9NclzlJp");
-        fetch("https://app.webinar-payment.uz/tilda/add-client", {
-          method: "POST",
-          body: webhookData,
-        }).catch(() => {});
+
+        const sent = navigator.sendBeacon(
+          "https://app.webinar-payment.uz/tilda/add-client",
+          new Blob([webhookData.toString()], { type: "application/x-www-form-urlencoded" })
+        );
+
+        if (!sent) {
+          await fetch("https://app.webinar-payment.uz/tilda/add-client", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: webhookData.toString(),
+          });
+        }
       } catch (_) {}
 
       window.location.href = "./pay.html";
