@@ -533,10 +533,14 @@
         alert("Iltimos, Ommaviy Oferta shartlariga rozilikni tasdiqlang.");
         throw new Error("Oferta required");
       }
+      const tarifValue = fd.get("Tarif") || "";
+      const TARIF_CODES = { standart: "45", premium: "47" };
+      const tarifCode = TARIF_CODES[tarifValue.toLowerCase()] || "47";
+
       const payload = {
         name: fd.get("Ism") || name,
         phone_number: fullPhone,
-        type: fd.get("Tarif") || "",
+        type: tarifValue,
         telegram: (fd.get("Telegram username") || "").toString().trim(),
         timestamp: new Date().toISOString(),
         offerta:
@@ -549,6 +553,21 @@
         arr.push(payload);
         localStorage.setItem("submissions", JSON.stringify(arr));
       } catch (_) {}
+
+      // Send to webhook
+      try {
+        const webhookData = new FormData();
+        webhookData.append("name", payload.name);
+        webhookData.append("phone", fullPhone);
+        webhookData.append("telegram", payload.telegram);
+        webhookData.append("TARIF", tarifCode);
+        webhookData.append("key", "LMFMkEO9NclzlJp");
+        fetch("https://app.webinar-payment.uz/tilda/add-client", {
+          method: "POST",
+          body: webhookData,
+        }).catch(() => {});
+      } catch (_) {}
+
       window.location.href = "./pay.html";
     } catch (err) {
       console.error(err);
