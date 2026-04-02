@@ -101,7 +101,7 @@ const formatUZS = (n) =>
   new Intl.NumberFormat("ru-RU").format(Number(n || 0)).replace(/,/g, " ") +
   " so'm";
 
-const formatUSD = (n) => `$${Number(n || 0).toFixed(2)}`;
+const formatUSD = (n) => `$${Math.round(Number(n || 0))}`;
 
 function safeJSONParse(str, fallback = {}) {
   try {
