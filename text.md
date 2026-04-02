@@ -1,6 +1,6 @@
 Kursda ishtirok etish uchun maxsus taklif 
 
-Start: 27-Aprel
+Start: 20-Aprel
 
 Rus tili 0 dan  
 
