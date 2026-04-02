@@ -7,8 +7,8 @@ Rus tili 0 dan
 2 oy ichida rus tilida bemalol gapirishni boshlaysiz 
 Hoziroq formani to'ldiring va bonuslarni qolga kirting
 
-Standart - 1 097 000 
- Premium - 1 297 000 
+Standart - 897 000 
+ Premium - 997 000 
 
 Yordamchi bilan bog’lanish
 +998 94 625 86 08 
