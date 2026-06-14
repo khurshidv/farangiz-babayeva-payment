@@ -6,7 +6,7 @@
     <style>
         * {margin: 0;padding: 0;box-sizing: border-box }body {font-family: MontserratNormal, sans-serif }.payment {padding: 18px 0 76px }.payment-container {max-width: 470px;margin: 0 auto;padding: 0 16px }.payment__header {background: linear-gradient(128.56deg, #eff7ff 0%, #d7eaff 100%);border-radius: 15px;padding: 22px;margin-bottom: 21px }.payment__title {font-family: MontserratBold, sans-serif;color: #2f3463;font-size: 22px;font-weight: 700;margin-bottom: 9px;text-transform: uppercase }.payment__tariff {font-family: MontserratNormal, sans-serif;font-weight: 400;font-size: 15px;color: #2f3463;margin-bottom: 17px;text-transform: capitalize }.payment__price {font-family: MontserratBold, sans-serif;font-weight: 700;font-size: 26px;color: #2f3463;margin-bottom: 5px }.payment__timer {display: flex;align-items: center;justify-content: space-between }.payment__time {font-family: MontserratNormal, sans-serif;padding: 10px 20px;font-size: 17px;color: #ff0000;background: #fff;border-radius: 10px }.payment__timer-label {max-width: 151px;font-family: MontserratMedium, sans-serif;font-size: 14px;color: #2f3463;line-height: 1.5 }.payment__instruction {padding: 22px 20px 0;border-radius: 20px;margin-bottom: 20px }.payment__step {font-family: MontserratMedium, sans-serif;font-size: 16px;font-weight: 500;color: #000;margin-bottom: 22px }.payment__card {border: 1px solid #e5e7eb;border-radius: 12px;margin-bottom: 20px;padding: 13px 14px 10px;display: flex;flex-direction: column }.payment__card-bottom {display: flex;align-items: center;justify-content: space-between }.payment__card-right {display: flex;flex-direction: column;align-items: center;max-width: 91px;font-size: 12px;color: #8a8a8a;cursor: pointer;border: none;gap: 2px;background: 0 0 }.payment__card-header {padding-bottom: 11px;border-bottom: 1px solid #e5e7eb;margin-bottom: 12px }.payment__card-type {font-family: MontserratMedium, sans-serif;font-size: 20px;font-weight: 500;display: flex;align-items: center;gap: 5px }.uzcard {width: 20px;height: 24px }.visa {width: 47px;height: 14px }.humo {width: 50px }.payment__card-amount {font-family: MontserratNormal, sans-serif;color: #000;font-weight: 700;font-size: 16px }.payment__card-number {font-family: MontserratMedium, sans-serif;color: #000;font-size: 20px }.payment__card-name {font-family: MontserratMedium, sans-serif;font-size: 15px }.radioRow {display: grid;grid-template-columns: 1fr 1fr;align-items: center;gap: 5px;margin-bottom: 20px }.radioBox {display: flex;align-items: center;gap: 5px;padding: 16px 10px;border: 1px solid #e5e7eb;border-radius: 10px;font-family: MontserratNormal, sans-serif;font-size: 16px;font-weight: 400 }.uploadCheck {padding: 20px 16px;display: flex;align-items: center;gap: 10px;font-family: MontserratNormal, sans-serif;font-size: 14px;font-weight: 400;border: 2px dashed #e5e7eb;border-radius: 10px;margin-bottom: 20px;cursor: pointer }.payment__btn {display: flex;justify-content: center;padding: 20px;width: 100%;background: #399cff;border-radius: 10px;font-family: MontserratSemiBold, sans-serif;font-weight: 600;color: #fff;text-decoration: none;transition: all .3s;text-transform: uppercase;border: none;cursor:pointer }.payment__help {border-radius: 20px;padding: 20px }.payment__help-text {font-size: 18px;font-family: MontserratNormal, sans-serif;max-width: 256px;text-align: center;margin: 0 auto 23px }.payment__btn--admin {background: #d1444e;border: 1px solid #d1444e }@media (max-width:480px) {.payment__title {font-size: 17px }.payment__header {background: #d8ebff }.payment__card-number {font-size: 16px }.payment__card-amount {font-size: 18px }.payment__card-type {font-size: 17px }.payment__card-name {font-size: 14px }}
     </style>
-    <link rel="stylesheet" href="https://isroil-ai.vercel.app/pay/css/main.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="fonts.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 <div class="payment__card payment__card--uzcard">
                     <div class="payment__card-header">
                         <div style="display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;">
-                            <span class="payment__card-type">Uz card<img src="https://isroil-ai.vercel.app/pay/images/uzcard.webp" alt="uzcard" width="30" class="uzcard"></span>
+                            <span class="payment__card-type">Uz card<svg class="uzcard" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Uzcard"><rect width="20" height="24" rx="5" fill="#0a3d91"></rect><path d="M5.5 6v6a4.5 4.5 0 0 0 9 0V6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"></path></svg></span>
                         </div>
                     </div>
                     <div class="payment__card-bottom">
@@ -50,7 +50,7 @@
                 <div class="payment__card payment__card--uzcard">
                     <div class="payment__card-header">
                         <div style="display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;">
-                            <span class="payment__card-type">Visa<img src="https://isroil-ai.vercel.app/pay/images/visa.webp" alt="visa" class="visa"></span><span class="payment__card-amount priceUSD"></span>
+                            <span class="payment__card-type">Visa<svg class="visa" viewBox="0 0 80 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visa"><text x="2" y="19" font-family="Arial, Helvetica, sans-serif" font-size="22" font-style="italic" font-weight="700" letter-spacing="-1" fill="#1A1F71">VISA</text></svg></span><span class="payment__card-amount priceUSD"></span>
                         </div>
                     </div>
                     <div class="payment__card-bottom">
@@ -157,104 +157,6 @@ async function getUZSToUSDRate() {
     console.error("Valyuta kursini olishda xatolik:", e);
     return null;
   }
-}
-
-/***********************
- * Upload UI
- ***********************/
-const fileInput = document.getElementById("chek");
-const uploadLabel = document.querySelector(".uploadCheck");
-const originalUploadHTML = uploadLabel?.innerHTML || "";
-
-function resetUploadLabel() {
-  if (!uploadLabel) return;
-  uploadLabel.innerHTML = originalUploadHTML;
-}
-
-function setUploadFileName(name) {
-  if (!uploadLabel) return;
-  uploadLabel.innerHTML = `
-  <svg width="54px" height="54px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M8.5 12.5L10.5 14.5L15.5 9.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-  </svg>
-    ${name}
-  `;
-}
-
-if (fileInput) {
-  fileInput.addEventListener("change", function () {
-    const file = this.files?.[0];
-    if (!file) { resetUploadLabel(); return; }
-    const maxSize = 10 * 1024 * 1024;
-    if (file.size > maxSize) {
-      alert("Fayl hajmi 10MB dan kichik bo'lishi kerak");
-      this.value = "";
-      resetUploadLabel();
-      return;
-    }
-    const allowedTypes = ["image/png", "image/jpeg", "application/pdf"];
-    if (!allowedTypes.includes(file.type)) {
-      alert("Faqat PNG, JPG yoki PDF fayllarni yuklash mumkin");
-      this.value = "";
-      resetUploadLabel();
-      return;
-    }
-    setUploadFileName(file.name);
-  });
-}
-
-/***********************
- * Submit form
- ***********************/
-const paymentForm = document.getElementById("paymentForm");
-
-if (paymentForm) {
-  paymentForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
-    const submitButton = this.querySelector(".payment__btn");
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = "Yuborilmoqda...";
-    }
-    try {
-      const localData = safeJSONParse(localStorage.getItem("formData"), {});
-      if (!localData.name || !localData.phone_number) {
-        alert("Ism yoki telefon raqami topilmadi. Iltimos, formani to'ldiring.");
-        if (submitButton) { submitButton.disabled = false; submitButton.textContent = "Davom etish"; }
-        return;
-      }
-      const form = new FormData(this);
-      const file = form.get("chek");
-      if (!file || !file.size) {
-        alert("Chek rasmini yuklang");
-        if (submitButton) { submitButton.disabled = false; submitButton.textContent = "Davom etish"; }
-        return;
-      }
-      const maxSize = 10 * 1024 * 1024;
-      if (file.size > maxSize) {
-        alert("Fayl hajmi 10MB dan kichik bo'lishi kerak");
-        if (submitButton) { submitButton.disabled = false; submitButton.textContent = "Davom etish"; }
-        return;
-      }
-      // Save to localStorage
-      const updatedLocalData = {
-        ...localData,
-        file_name: file.name,
-        last_submitted: new Date().toISOString(),
-      };
-      localStorage.setItem("formData", JSON.stringify(updatedLocalData));
-
-      this.reset();
-      resetUploadLabel();
-      if (submitButton) { submitButton.disabled = false; submitButton.textContent = "Davom etish"; }
-      window.location.href = "./thankYou.html";
-    } catch (err) {
-      console.error("Submit error:", err);
-      alert(`Xato yuz berdi: ${err?.message || err}. Iltimos, keyinroq qayta urinib ko'ring.`);
-      if (submitButton) { submitButton.disabled = false; submitButton.textContent = "Davom etish"; }
-    }
-  });
 }
 
 /***********************
